@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "setup": "rm -rf public node_modules && npm i && bower i && gulp build",
+    "postinstall": "bower i && gulp build"
   },
   "dependencies": {
     "async": "^1.5.2",
